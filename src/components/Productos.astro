@@ -1,0 +1,380 @@
+---
+// Componente de Productos
+---
+<section class="productos-section" id="productos">
+  <div class="productos-container">
+    <div class="section-header" data-animate>
+      <span class="section-eyebrow">Selección Especial</span>
+      <h2 class="section-title">NUESTROS PRODUCTOS</h2>
+      <div class="title-ornament"><span></span><span class="diamond">◆</span><span></span></div>
+    </div>
+
+    <!-- Filtros de Categorías -->
+    <div class="productos-filters" data-animate>
+      <button class="filter-btn active" data-filter="ensaladas">Ensaladas</button>
+      <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+      <button class="filter-btn" data-filter="postres">Postres</button>
+    </div>
+
+    <!-- Grid de Productos -->
+    <div class="productos-grid" data-animate>
+      <!-- Ensaladas -->
+      <div class="product-card" data-category="ensaladas">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Ensalada 1</span>
+            <small>public/fotos/ensalada-1.jpg</small>
+          </div>
+          <img src="/fotos/ensalada-1.jpg" alt="Ensalada 1" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Ensalada César con Pollo</h3>
+          <p>Fresca lechuga orejona, aderezo César de la casa, crotones y pechuga de pollo a la parrilla.</p>
+          <span class="product-price">$180</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="ensaladas">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Ensalada 2</span>
+            <small>public/fotos/ensalada-2.jpg</small>
+          </div>
+          <img src="/fotos/ensalada-2.jpg" alt="Ensalada 2" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Ensalada Caprese</h3>
+          <p>Rodajas de jitomate fresco, queso mozzarella, albahaca y reducción de balsámico.</p>
+          <span class="product-price">$165</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="ensaladas">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Ensalada 3</span>
+            <small>public/fotos/ensalada-3.jpg</small>
+          </div>
+          <img src="/fotos/ensalada-3.jpg" alt="Ensalada 3" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Ensalada Pixán</h3>
+          <p>Mix de lechugas, frutos rojos, nuez caramelizada, queso de cabra y vinagreta de miel.</p>
+          <span class="product-price">$195</span>
+        </div>
+      </div>
+
+      <!-- Bebidas -->
+      <div class="product-card hidden" data-category="bebidas">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Bebida 1</span>
+            <small>public/fotos/bebida-1.jpg</small>
+          </div>
+          <img src="/fotos/bebida-1.jpg" alt="Bebida 1" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Clamato Preparado</h3>
+          <p>Nuestra receta especial de clamato con salsas negras, limón y escarchado de la casa.</p>
+          <span class="product-price">$95</span>
+        </div>
+      </div>
+
+      <div class="product-card hidden" data-category="bebidas">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Bebida 2</span>
+            <small>public/fotos/bebida-2.jpg</small>
+          </div>
+          <img src="/fotos/bebida-2.jpg" alt="Bebida 2" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Margarita de Mezcal</h3>
+          <p>Mezcal artesanal, jugo de limón, licor de naranja y escarchado con sal de gusano.</p>
+          <span class="product-price">$140</span>
+        </div>
+      </div>
+
+      <div class="product-card hidden" data-category="bebidas">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Bebida 3</span>
+            <small>public/fotos/bebida-3.jpg</small>
+          </div>
+          <img src="/fotos/bebida-3.jpg" alt="Bebida 3" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Limonada de Frutos Rojos</h3>
+          <p>Refrescante limonada natural mezclada con compota artesanal de frutos del bosque.</p>
+          <span class="product-price">$75</span>
+        </div>
+      </div>
+
+      <!-- Postres -->
+      <div class="product-card hidden" data-category="postres">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Postre 1</span>
+            <small>public/fotos/postre-1.jpg</small>
+          </div>
+          <img src="/fotos/postre-1.jpg" alt="Postre 1" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Volcán de Chocolate</h3>
+          <p>Pastel tibio de chocolate con centro líquido, acompañado de helado de vainilla artesanal.</p>
+          <span class="product-price">$120</span>
+        </div>
+      </div>
+
+      <div class="product-card hidden" data-category="postres">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Postre 2</span>
+            <small>public/fotos/postre-2.jpg</small>
+          </div>
+          <img src="/fotos/postre-2.jpg" alt="Postre 2" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Cheesecake de Guayaba</h3>
+          <p>Cremoso cheesecake horneado sobre base de galleta, cubierto con dulce artesanal de guayaba.</p>
+          <span class="product-price">$110</span>
+        </div>
+      </div>
+
+      <div class="product-card hidden" data-category="postres">
+        <div class="product-image-wrapper">
+          <div class="image-placeholder">
+            <span>📷 Postre 3</span>
+            <small>public/fotos/postre-3.jpg</small>
+          </div>
+          <img src="/fotos/postre-3.jpg" alt="Postre 3" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
+        </div>
+        <div class="product-info">
+          <h3>Flan de Elote</h3>
+          <p>Flan cremoso de elote tierno con caramelo tradicional y nuez picada.</p>
+          <span class="product-price">$95</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function initProductsFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        productCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          
+          if (cardCategory === filterValue) {
+            card.classList.remove('hidden');
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              card.classList.add('hidden');
+            }, 300);
+          }
+        });
+      });
+    });
+  }
+
+  // Ejecutar tanto en carga inicial como en transiciones de página
+  document.addEventListener('DOMContentLoaded', initProductsFilter);
+</script>
+
+<style>
+  .productos-section {
+    background-color: var(--color-bg);
+    padding: 6rem 2rem;
+    position: relative;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .productos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .productos-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .productos-filters.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .filter-btn {
+    background: transparent;
+    border: 1px solid rgba(232, 221, 208, 0.2);
+    color: var(--color-text-muted);
+    padding: 0.75rem 2rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    text-transform: uppercase;
+  }
+
+  .filter-btn:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+
+  .filter-btn.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+  }
+
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    min-height: 450px;
+  }
+
+  .product-card {
+    background: rgba(21, 5, 5, 0.4);
+    border: 1px solid rgba(192, 20, 28, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .product-card.hidden {
+    display: none !important;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(192, 20, 28, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background-color: #120303;
+  }
+
+  .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .product-card:hover .product-img {
+    transform: scale(1.08);
+  }
+
+  .image-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1f0808 0%, #0d0202 100%);
+    border: 1px dashed rgba(192, 20, 28, 0.25);
+    margin: 10px;
+    border-radius: 4px;
+    color: rgba(232, 221, 208, 0.6);
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  .image-placeholder span {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .image-placeholder small {
+    font-size: 0.75rem;
+    font-family: monospace;
+    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+
+  .product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-top: 1px solid rgba(192, 20, 28, 0.1);
+  }
+
+  .product-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .product-info p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+  }
+
+  .product-price {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    align-self: flex-start;
+  }
+
+  @media (max-width: 992px) {
+    .productos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .productos-grid {
+      grid-template-columns: 1fr;
+    }
+    .filter-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+    }
+  }
+</style>
