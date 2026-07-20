@@ -27,11 +27,6 @@
           </div>
           <img src="/fotos/ensalada-1.jpg" alt="Ensalada 1" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
         </div>
-        <div class="product-info">
-          <h3>Ensalada César con Pollo</h3>
-          <p>Fresca lechuga orejona, aderezo César de la casa, crotones y pechuga de pollo a la parrilla.</p>
-          <span class="product-price">$180</span>
-        </div>
       </div>
 
       <div class="product-card" data-category="ensaladas">
@@ -42,11 +37,6 @@
           </div>
           <img src="/fotos/ensalada-2.jpg" alt="Ensalada 2" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
         </div>
-        <div class="product-info">
-          <h3>Ensalada Caprese</h3>
-          <p>Rodajas de jitomate fresco, queso mozzarella, albahaca y reducción de balsámico.</p>
-          <span class="product-price">$165</span>
-        </div>
       </div>
 
       <div class="product-card" data-category="ensaladas">
@@ -56,11 +46,6 @@
             <small>public/fotos/ensalada-3.jpg</small>
           </div>
           <img src="/fotos/ensalada-3.jpg" alt="Ensalada 3" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
-        </div>
-        <div class="product-info">
-          <h3>Ensalada Pixán</h3>
-          <p>Mix de lechugas, frutos rojos, nuez caramelizada, queso de cabra y vinagreta de miel.</p>
-          <span class="product-price">$195</span>
         </div>
       </div>
 
@@ -73,11 +58,6 @@
           </div>
           <img src="/fotos/bebida-1.jpg" alt="Bebida 1" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
         </div>
-        <div class="product-info">
-          <h3>Clamato Preparado</h3>
-          <p>Nuestra receta especial de clamato con salsas negras, limón y escarchado de la casa.</p>
-          <span class="product-price">$95</span>
-        </div>
       </div>
 
       <div class="product-card hidden" data-category="bebidas">
@@ -88,11 +68,6 @@
           </div>
           <img src="/fotos/bebida-2.jpg" alt="Bebida 2" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
         </div>
-        <div class="product-info">
-          <h3>Margarita de Mezcal</h3>
-          <p>Mezcal artesanal, jugo de limón, licor de naranja y escarchado con sal de gusano.</p>
-          <span class="product-price">$140</span>
-        </div>
       </div>
 
       <div class="product-card hidden" data-category="bebidas">
@@ -102,11 +77,6 @@
             <small>public/fotos/bebida-3.jpg</small>
           </div>
           <img src="/fotos/bebida-3.jpg" alt="Bebida 3" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
-        </div>
-        <div class="product-info">
-          <h3>Limonada de Frutos Rojos</h3>
-          <p>Refrescante limonada natural mezclada con compota artesanal de frutos del bosque.</p>
-          <span class="product-price">$75</span>
         </div>
       </div>
 
@@ -119,11 +89,6 @@
           </div>
           <img src="/fotos/postre-1.jpg" alt="Postre 1" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
         </div>
-        <div class="product-info">
-          <h3>Volcán de Chocolate</h3>
-          <p>Pastel tibio de chocolate con centro líquido, acompañado de helado de vainilla artesanal.</p>
-          <span class="product-price">$120</span>
-        </div>
       </div>
 
       <div class="product-card hidden" data-category="postres">
@@ -134,11 +99,6 @@
           </div>
           <img src="/fotos/postre-2.jpg" alt="Postre 2" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
         </div>
-        <div class="product-info">
-          <h3>Cheesecake de Guayaba</h3>
-          <p>Cremoso cheesecake horneado sobre base de galleta, cubierto con dulce artesanal de guayaba.</p>
-          <span class="product-price">$110</span>
-        </div>
       </div>
 
       <div class="product-card hidden" data-category="postres">
@@ -148,11 +108,6 @@
             <small>public/fotos/postre-3.jpg</small>
           </div>
           <img src="/fotos/postre-3.jpg" alt="Postre 3" class="product-img" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';" />
-        </div>
-        <div class="product-info">
-          <h3>Flan de Elote</h3>
-          <p>Flan cremoso de elote tierno con caramelo tradicional y nuez picada.</p>
-          <span class="product-price">$95</span>
         </div>
       </div>
     </div>
@@ -253,7 +208,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    min-height: 450px;
+    min-height: 300px;
   }
 
   .product-card {
@@ -330,37 +285,7 @@
     border-radius: 2px;
   }
 
-  .product-info {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    border-top: 1px solid rgba(192, 20, 28, 0.1);
-  }
 
-  .product-info h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.03em;
-  }
-
-  .product-info p {
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: var(--color-text-muted);
-    margin-bottom: 1.25rem;
-    flex-grow: 1;
-  }
-
-  .product-price {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
-    color: var(--color-primary);
-    font-weight: 600;
-    align-self: flex-start;
-  }
 
   @media (max-width: 992px) {
     .productos-grid {
