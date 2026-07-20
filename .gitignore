@@ -1,0 +1,14 @@
+# Dependencias
+node_modules/
+
+# Temporales de Astro
+.astro/
+dist/
+
+# Archivos de configuración local o logs
+npm-debug.log*
+.env
+.env.production
+
+# Videos muy pesados (exceden el límite de GitHub de 100MB / recomendación de 50MB)
+public/videos/*.mp4

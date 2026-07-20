@@ -1,0 +1,155 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Concepto from "../components/Concepto.astro";
+import Menu from "../components/Menu.astro";
+import Galeria from "../components/Galeria.astro";
+import Historia from "../components/Historia.astro";
+import Contacto from "../components/Contacto.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Pixán Cocina del Alma | Paraíso, Tabasco</title>
+		<meta
+			name="description"
+			content="En Pixán Cocina del Alma transformamos ingredientes selectos en experiencias memorables a través de una propuesta de cocina contemporánea internacional en Paraíso, Tabasco."
+		/>
+		<meta
+			name="keywords"
+			content="Restaurante, Paraíso, Tabasco, Cocina Contemporánea, Cocina Internacional, Desayunos, Cortes, Mariscos"
+		/>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<Navbar />
+
+		<main>
+			<Hero />
+			<Concepto />
+			<Menu />
+			<Galeria />
+			<Historia />
+			<Contacto />
+		</main>
+
+		<Footer />
+
+		<script>
+			// Intersection Observer for scroll animations
+			const observerOptions = {
+				root: null,
+				rootMargin: "0px",
+				threshold: 0.15,
+			};
+
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+						observer.unobserve(entry.target);
+					}
+				});
+			}, observerOptions);
+
+			document.addEventListener("DOMContentLoaded", () => {
+				const animatedElements =
+					document.querySelectorAll("[data-animate]");
+				animatedElements.forEach((el) => {
+					observer.observe(el);
+				});
+			});
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--color-primary: #c0141c;
+		--color-primary-light: #e01a24;
+		--color-bg: #0a0000;
+		--color-bg-alt: #150505;
+		--color-text: #e8ddd0;
+		--color-text-muted: rgba(232, 221, 208, 0.6);
+		--color-border: rgba(192, 20, 28, 0.2);
+
+		--font-heading: "Cormorant Garamond", serif;
+		--font-body: "Inter", sans-serif;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		font-family: var(--font-body);
+		background-color: var(--color-bg);
+		color: var(--color-text);
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+	}
+
+	body {
+		min-height: 100vh;
+		overflow-x: hidden;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-heading);
+		font-weight: normal;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	::selection {
+		background-color: var(--color-primary);
+		color: #fff;
+	}
+
+	/* Custom Scrollbar */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		background: var(--color-bg);
+	}
+	::-webkit-scrollbar-thumb {
+		background: rgba(192, 20, 28, 0.3);
+		border-radius: 4px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--color-primary);
+	}
+</style>

@@ -1,0 +1,398 @@
+---
+---
+<section class="hero" id="inicio" aria-label="Bienvenida a Pixán Cocina del Alma">
+  <!-- Fondo global del hero -->
+  <div class="hero-bg-global">
+    <div class="hero-grain"></div>
+    <div class="hero-gradient"></div>
+  </div>
+
+  <div class="hero-container">
+    <!-- Mitad Izquierda: Contenido -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Paraíso, Tabasco · Desde 2019</span>
+        <span class="eyebrow-line hidden-desktop"></span>
+      </div>
+      
+      <img src="/logo.png" alt="Pixán Cocina del Alma" class="hero-logo" />
+      
+      <p class="hero-tagline">Una cocina sin fronteras, diseñada para alimentar cuerpo y alma.</p>
+      
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary" id="hero-menu-btn">Ver Menú</a>
+        <a href="#concepto" class="btn btn-outline" id="hero-concepto-btn">Nuestra Historia</a>
+      </div>
+      
+      <div class="hero-schedule">
+        <div class="schedule-item">
+          <span class="schedule-icon">☀</span>
+          <span>Desayunos 07:00 — 13:00</span>
+        </div>
+        <span class="schedule-divider">|</span>
+        <div class="schedule-item">
+          <span class="schedule-icon">🕯</span>
+          <span>Comidas & Cenas 13:00 — 23:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mitad Derecha: Video -->
+    <div class="hero-visual">
+      <div class="video-frame">
+        <div class="video-glow"></div>
+        <video autoplay muted loop playsinline class="hero-video-element" src="/videos/hero.mp4"></video>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator" aria-hidden="true">
+    <span class="scroll-text">Descubre más</span>
+    <div class="scroll-arrow">
+      <span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0a0000;
+    padding: 6rem 3rem 4rem;
+  }
+
+  .hero-bg-global {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 0% 50%, rgba(192,20,28,0.08) 0%, transparent 50%),
+                linear-gradient(to bottom, transparent 80%, #0a0000 100%);
+  }
+
+  .hero-grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* --- CONTENIDO IZQUIERDO --- */
+  .hero-content {
+    animation: heroFadeInLeft 1.2s ease both;
+    text-align: left;
+    margin-left: auto;
+    max-width: 500px;
+  }
+
+  @keyframes heroFadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .eyebrow-line {
+    width: 40px;
+    height: 1px;
+    background: #c0141c;
+    display: inline-block;
+  }
+  
+  .eyebrow-text {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #c0141c;
+  }
+
+  .hero-logo {
+    width: min(320px, 100%);
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(192,20,28,0.2));
+  }
+
+  .hero-tagline {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-style: italic;
+    color: #e8ddd0;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    max-width: 90%;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85rem 2.2rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: #c0141c;
+    color: #fff;
+    border: 1px solid #c0141c;
+    box-shadow: 0 4px 20px rgba(192,20,28,0.35);
+  }
+
+  .btn-primary:hover {
+    background: #e01a24;
+    box-shadow: 0 8px 30px rgba(192,20,28,0.55);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #e8ddd0;
+    border: 1px solid rgba(232,221,208,0.4);
+  }
+
+  .btn-outline:hover {
+    border-color: #e8ddd0;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .hero-schedule {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: rgba(232,221,208,0.65);
+    letter-spacing: 0.08em;
+  }
+
+  .schedule-item { display: flex; align-items: center; gap: 0.4rem; }
+  .schedule-divider { color: rgba(192,20,28,0.5); }
+
+  /* --- VISUAL DERECHO --- */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: heroFadeInRight 1.2s ease 0.2s both;
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes heroFadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .video-frame {
+    position: relative;
+    height: 75vh;
+    width: auto;
+    max-width: 100%;
+    aspect-ratio: 9/16;
+    border-radius: 20px;
+    background: #110505;
+    border: 1px solid rgba(192,20,28,0.25);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(192,20,28,0.15);
+  }
+
+  .video-glow {
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #c0141c, transparent, #c0141c);
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 20px;
+  }
+
+  .hero-video-element {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 2;
+    border: 2px dashed rgba(192,20,28,0.3);
+    margin: 1rem;
+    border-radius: 12px;
+    background: rgba(10,0,0,0.4);
+  }
+  
+  .video-placeholder span { font-size: 2.5rem; opacity: 0.5; }
+  
+  .video-placeholder p {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c0141c;
+    margin: 0;
+  }
+  
+  .video-placeholder small {
+    font-size: 0.75rem;
+    color: rgba(232,221,208,0.5);
+  }
+
+  /* --- COMPOSICIÓN DE VISUALES --- */
+  .visual-composition {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 1rem;
+    align-items: stretch;
+    max-width: 1000px;
+    margin-left: auto;
+  }
+
+  /* La foto se estira para tener la misma altura que el video */
+  .image-frame-hero {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(192,20,28,0.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    width: 100%;
+  }
+
+  .image-frame-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* --- INDICADOR DE SCROLL --- */
+  .hero-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(8px); }
+  }
+  
+  .scroll-text {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232,221,208,0.5);
+  }
+  
+  .scroll-arrow { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .scroll-arrow span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid rgba(192,20,28,0.6);
+    border-bottom: 1px solid rgba(192,20,28,0.6);
+    transform: rotate(45deg);
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 900px) {
+    .hero {
+      padding-top: 8rem;
+    }
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    
+    .hero-eyebrow { justify-content: center; }
+    .hidden-desktop { display: inline-block; }
+    .hero-logo { margin: 0 auto 2rem; }
+    .hero-tagline { margin: 0 auto 2.5rem; }
+    .hero-cta { justify-content: center; }
+    .hero-schedule { justify-content: center; }
+    
+    .hero-visual {
+      order: -1; /* Pone el video arriba del texto en móviles */
+    }
+    
+    .visual-composition {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-frame-hero {
+      width: 280px;
+      max-width: 280px;
+    }
+
+    .video-frame {
+      width: 280px;
+      max-width: 280px;
+    }
+
+    .hero-scroll-indicator {
+      display: none; /* Ocultar en móviles para ahorrar espacio */
+    }
+  }
+</style>

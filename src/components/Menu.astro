@@ -1,0 +1,130 @@
+---
+---
+<section class="menu-section" id="menu" aria-label="Menú Pixán">
+  <div class="menu-container">
+    <div class="section-header" data-animate>
+      <span class="section-eyebrow">Descubre nuestros sabores</span>
+      <h2 class="section-title">El Menú</h2>
+      <div class="title-ornament"><span></span><span class="diamond">◆</span><span></span></div>
+      <p class="section-subtitle">Una propuesta gastronómica que viaja por el mundo sin perder el alma de nuestra tierra.</p>
+    </div>
+
+    <!-- VISTAS PREVIAS DE PDF -->
+    <div class="menu-pdf-zone" id="menu-slot" data-animate>
+      <div class="pdf-wrapper">
+        <h3 class="pdf-title">Menú Desayunos</h3>
+        <iframe src="/menu/menu-desayunos.pdf" class="pdf-iframe" title="Menú Desayunos"></iframe>
+        <a href="/menu/menu-desayunos.pdf" target="_blank" class="btn-download">Abrir en pantalla completa</a>
+      </div>
+      <div class="pdf-wrapper">
+        <h3 class="pdf-title">Menú Comidas & Cenas</h3>
+        <iframe src="/menu/menu-comidas.pdf" class="pdf-iframe" title="Menú Comidas y Cenas"></iframe>
+        <a href="/menu/menu-comidas.pdf" target="_blank" class="btn-download">Abrir en pantalla completa</a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<style>
+  .menu-section {
+    background: #080000;
+    padding: 7rem 2rem;
+    position: relative;
+  }
+  .menu-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c0141c, transparent);
+  }
+  .menu-container { max-width: 1200px; margin: 0 auto; }
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .section-header.visible { opacity: 1; transform: translateY(0); }
+  .section-eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #c0141c;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin: 0 0 1rem;
+  }
+  .title-ornament {
+    display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;
+  }
+  .title-ornament span { display: block; width: 60px; height: 1px; background: rgba(192,20,28,0.4); }
+  .title-ornament .diamond { color: #c0141c; font-size: 0.6rem; }
+  .section-subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(232,221,208,0.6);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .menu-pdf-zone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+  }
+  .menu-pdf-zone.visible { opacity: 1; transform: translateY(0); }
+  .pdf-wrapper {
+    background: rgba(15,3,3,0.7);
+    border: 1px solid rgba(192,20,28,0.2);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .pdf-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #e8ddd0;
+    margin: 0;
+  }
+  .pdf-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    background: #e8ddd0; /* PDFs suelen tener fondo blanco */
+  }
+  .btn-download {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background: #c0141c;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+  }
+  .btn-download:hover { background: #e01a24; }
+
+  @media (max-width: 900px) {
+    .menu-pdf-zone { grid-template-columns: 1fr; gap: 2rem; }
+    .pdf-iframe { height: 450px; }
+  }
+</style>

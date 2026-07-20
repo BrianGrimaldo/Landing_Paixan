@@ -1,0 +1,173 @@
+---
+---
+<section class="concepto" id="concepto" aria-label="Concepto y diferenciador">
+  <div class="concepto-container">
+    <!-- CONCEPTO -->
+    <div class="section-header" data-animate>
+      <span class="section-eyebrow">Nuestra Esencia</span>
+      <h2 class="section-title">Cocina del Alma</h2>
+      <div class="title-ornament"><span></span><span class="diamond">◆</span><span></span></div>
+    </div>
+
+    <div class="concepto-grid" data-animate>
+      <div class="concepto-text">
+        <p class="lead-text">
+          En <em>Pixán Cocina del Alma</em> transformamos ingredientes selectos en experiencias memorables a través de una propuesta de cocina contemporánea internacional.
+        </p>
+        <p>
+          Nuestra esencia combina sabores, técnicas y tradiciones gastronómicas de distintas partes del mundo, reinterpretadas con creatividad, elegancia y un toque único.
+        </p>
+        <p>
+          Cada platillo es elaborado cuidando cada detalle, desde la selección de ingredientes frescos hasta su presentación, ofreciendo una experiencia que despierta todos los sentidos.
+        </p>
+        <div class="concepto-tags">
+          <span class="tag">Desayunos</span>
+          <span class="tag">Entradas</span>
+          <span class="tag">Pastas</span>
+          <span class="tag">Cortes</span>
+          <span class="tag">Mariscos</span>
+          <span class="tag">Especialidades</span>
+          <span class="tag">Postres</span>
+        </div>
+      </div>
+
+      <!-- ESPACIO PARA FOTO 1 -->
+      <div class="concepto-image-slot" id="concepto-foto-1" aria-label="Espacio para foto del restaurante">
+        <img src="/fotos/restaurante.jpg" alt="Interior Pixán" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .concepto {
+    background: #0a0000;
+    padding: 7rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .concepto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c0141c, transparent);
+  }
+  .concepto-container { max-width: 1100px; margin: 0 auto; }
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .section-header.visible { opacity: 1; transform: translateY(0); }
+  .section-eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #c0141c;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin: 0 0 1rem;
+  }
+  .title-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .title-ornament span { display: block; width: 60px; height: 1px; background: rgba(192,20,28,0.4); }
+  .title-ornament .diamond { color: #c0141c; font-size: 0.6rem; }
+  .concepto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+  }
+  .concepto-grid.visible { opacity: 1; transform: translateY(0); }
+  .lead-text {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #e8ddd0;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .concepto-text p {
+    color: rgba(232,221,208,0.75);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  .concepto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c0141c;
+    border: 1px solid rgba(192,20,28,0.3);
+    padding: 0.3rem 0.8rem;
+    transition: all 0.3s ease;
+  }
+  .tag:hover { background: rgba(192,20,28,0.1); border-color: #c0141c; }
+  .concepto-image-slot {
+    aspect-ratio: 4/5;
+    border: 1px solid rgba(192,20,28,0.25);
+    position: relative;
+    overflow: hidden;
+    background: rgba(20,5,5,0.6);
+  }
+  .image-upload-zone {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: 2px dashed rgba(192,20,28,0.2);
+    margin: 1.5rem;
+  }
+  .image-upload-zone img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .upload-icon { font-size: 2.5rem; opacity: 0.5; }
+  .upload-label {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    color: rgba(232,221,208,0.6);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .concepto-grid { grid-template-columns: 1fr; }
+    .concepto-image-slot { aspect-ratio: 16/9; }
+  }
+</style>

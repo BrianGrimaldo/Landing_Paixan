@@ -1,0 +1,388 @@
+---
+
+---
+
+<section class="historia" id="historia" aria-label="Historia de Pixán">
+  <div class="historia-container">
+    <div class="section-header" data-animate>
+      <span class="section-eyebrow">Desde noviembre 2019</span>
+      <h2 class="section-title">Nuestra Historia</h2>
+      <div class="title-ornament">
+        <span></span><span class="diamond">◆</span><span></span>
+      </div>
+    </div>
+
+    <div class="historia-layout" data-animate>
+      <div class="historia-image-slot" id="historia-foto-slot">
+        <img
+          src="/fotos/historia.jpeg"
+          alt="Historia de Pixán"
+          style="width: 100%; height: 100%; object-fit: cover;"
+        />
+        <div class="historia-badge">
+          <span class="badge-year">2019</span>
+          <span class="badge-label">Fundación</span>
+        </div>
+      </div>
+
+      <div class="historia-content">
+        <div class="historia-etymology">
+          <span class="etymology-word">Pixán</span>
+          <span class="etymology-divider">·</span>
+          <span class="etymology-meaning"
+            >Del maya <em>píischan</em> — "Alma"</span
+          >
+        </div>
+
+        <p class="historia-lead">
+          Pixán Cocina del Alma nació en noviembre de 2019 con la visión de
+          crear un espacio donde la gastronomía fuera mucho más que una comida:
+          una experiencia capaz de despertar emociones, crear recuerdos y
+          conectar a las personas a través de los sabores.
+        </p>
+
+        <p>
+          El nombre <em>Pixán</em> encuentra sus raíces en la palabra maya <em
+            >píischan</em
+          >, que significa "alma", la esencia que habita en cada persona y
+          aquello que da sentido a las experiencias que vivimos. Bajo esa
+          filosofía nació nuestro concepto: poner el alma en cada detalle, en
+          cada ingrediente y en cada platillo.
+        </p>
+
+        <p>
+          Cada elemento del menú fue concebido con una profunda atención al
+          detalle, inspirado en los lugares recorridos, las historias vividas y
+          la riqueza culinaria descubierta en distintas culturas. Cada receta
+          representa un fragmento de esas experiencias, reinterpretadas a través
+          de una cocina contemporánea internacional.
+        </p>
+
+        <blockquote class="historia-quote">
+          <p>
+            "Las mejores historias siempre comienzan con una buena conversación
+            y un platillo preparado con el corazón."
+          </p>
+          <footer>— Pixán Cocina del Alma</footer>
+        </blockquote>
+
+        <p>
+          Más que un restaurante, Pixán es un refugio para quienes buscan
+          compartir, celebrar y descubrir nuevas sensaciones alrededor de la
+          mesa. Un lugar donde la tradición y la innovación convergen.
+        </p>
+      </div>
+    </div>
+
+    <!-- TIMELINE MILESTONES -->
+    <div class="milestones" data-animate>
+      <div class="milestone">
+        <span class="m-year">2019</span>
+        <span class="m-dot"></span>
+        <p class="m-text">Apertura en Paraíso, Tabasco</p>
+      </div>
+      <div class="m-line"></div>
+      <div class="milestone">
+        <span class="m-year">2020</span>
+        <span class="m-dot"></span>
+        <p class="m-text">Consolidación de la propuesta internacional</p>
+      </div>
+      <div class="m-line"></div>
+      <div class="milestone">
+        <span class="m-year">Hoy</span>
+        <span class="m-dot m-dot-active"></span>
+        <p class="m-text">Referente gastronómico del sureste</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .historia {
+    background: #060000;
+    padding: 7rem 2rem;
+    position: relative;
+  }
+  .historia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c0141c, transparent);
+  }
+  .historia-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  .section-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .section-eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #c0141c;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin: 0 0 1rem;
+  }
+  .title-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .title-ornament span {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: rgba(192, 20, 28, 0.4);
+  }
+  .title-ornament .diamond {
+    color: #c0141c;
+    font-size: 0.6rem;
+  }
+
+  .historia-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease 0.15s,
+      transform 0.7s ease 0.15s;
+  }
+  .historia-layout.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .historia-image-slot {
+    aspect-ratio: 3/4;
+    border: 1px solid rgba(192, 20, 28, 0.2);
+    position: relative;
+    background: rgba(15, 3, 3, 0.6);
+    overflow: visible;
+  }
+  .image-upload-zone {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border: 2px dashed rgba(192, 20, 28, 0.2);
+    margin: 1.2rem;
+  }
+  .image-upload-zone span {
+    font-size: 2rem;
+    opacity: 0.4;
+  }
+  .image-upload-zone p {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(232, 221, 208, 0.45);
+    margin: 0;
+    text-align: center;
+  }
+  .image-upload-zone small {
+    font-size: 0.65rem;
+    color: rgba(192, 20, 28, 0.4);
+  }
+  .image-upload-zone img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image-upload-zone code {
+    background: rgba(192, 20, 28, 0.08);
+    padding: 0.05rem 0.3rem;
+    font-size: 0.6rem;
+  }
+  .historia-badge {
+    position: absolute;
+    bottom: -1.2rem;
+    right: -1.2rem;
+    width: 80px;
+    height: 80px;
+    background: #c0141c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 4px 20px rgba(192, 20, 28, 0.5);
+  }
+  .badge-year {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  .badge-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .historia-etymology {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(192, 20, 28, 0.2);
+  }
+  .etymology-word {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #c0141c;
+    letter-spacing: 0.05em;
+  }
+  .etymology-divider {
+    color: rgba(232, 221, 208, 0.3);
+    font-size: 1.2rem;
+  }
+  .etymology-meaning {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: rgba(232, 221, 208, 0.65);
+    font-style: italic;
+  }
+
+  .historia-lead {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #e8ddd0;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .historia-content p {
+    color: rgba(232, 221, 208, 0.7);
+    font-size: 0.92rem;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+  .historia-quote {
+    border-left: 2px solid #c0141c;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background: rgba(192, 20, 28, 0.05);
+  }
+  .historia-quote p {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #e8ddd0 !important;
+    margin-bottom: 0.3rem !important;
+  }
+  .historia-quote footer {
+    font-size: 0.75rem;
+    color: #c0141c;
+    letter-spacing: 0.1em;
+  }
+
+  /* MILESTONES */
+  .milestones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease 0.3s,
+      transform 0.7s ease 0.3s;
+  }
+  .milestones.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .milestone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    width: 160px;
+  }
+  .m-year {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #c0141c;
+    letter-spacing: 0.05em;
+  }
+  .m-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(192, 20, 28, 0.3);
+    border: 2px solid #c0141c;
+  }
+  .m-dot-active {
+    background: #c0141c;
+    box-shadow: 0 0 16px rgba(192, 20, 28, 0.7);
+  }
+  .m-text {
+    font-size: 0.8rem;
+    color: rgba(232, 221, 208, 0.6);
+    line-height: 1.4;
+    margin: 0;
+  }
+  .m-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(192, 20, 28, 0.25);
+    max-width: 120px;
+  }
+
+  @media (max-width: 900px) {
+    .historia-layout {
+      grid-template-columns: 1fr;
+    }
+    .historia-image-slot {
+      aspect-ratio: 16/9;
+    }
+    .milestones {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .m-line {
+      width: 1px;
+      height: 40px;
+    }
+  }
+</style>
