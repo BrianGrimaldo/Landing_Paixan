@@ -1,0 +1,98 @@
+---
+// Divisor decorativo con motivos mayas
+const { variant = 'default' } = Astro.props;
+---
+
+<div class={`maya-divider maya-divider--${variant}`} aria-hidden="true">
+  <svg class="maya-svg" viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <!-- Línea central -->
+    <line x1="0" y1="30" x2="1200" y2="30" stroke="rgba(192,20,28,0.25)" stroke-width="1"/>
+
+    <!-- Patrón de grecas escalonadas (step fret) repetido -->
+    <!-- Centro - ornamento principal -->
+    <g transform="translate(540, 10)">
+      <!-- Glifo central tipo jade/sol maya -->
+      <rect x="55" y="8" width="10" height="10" fill="none" stroke="#c0141c" stroke-width="1" opacity="0.7"/>
+      <rect x="58" y="11" width="4" height="4" fill="#c0141c" opacity="0.5"/>
+      <rect x="50" y="13" width="5" height="4" fill="none" stroke="#c0141c" stroke-width="0.8" opacity="0.6"/>
+      <rect x="65" y="13" width="5" height="4" fill="none" stroke="#c0141c" stroke-width="0.8" opacity="0.6"/>
+      <rect x="55" y="22" width="10" height="5" fill="none" stroke="#c0141c" stroke-width="0.8" opacity="0.6"/>
+      <line x1="30" y1="20" x2="50" y2="20" stroke="rgba(192,20,28,0.5)" stroke-width="1"/>
+      <line x1="70" y1="20" x2="90" y2="20" stroke="rgba(192,20,28,0.5)" stroke-width="1"/>
+      <!-- Punto decorativo -->
+      <circle cx="60" cy="20" r="3" fill="none" stroke="#c0141c" stroke-width="1" opacity="0.8"/>
+      <circle cx="60" cy="20" r="1" fill="#c0141c" opacity="0.7"/>
+    </g>
+
+    <!-- Greca escalonada izquierda -->
+    <g transform="translate(80, 15)" opacity="0.55">
+      <polyline points="0,15 0,0 8,0 8,8 16,8 16,0 24,0 24,15" fill="none" stroke="#c0141c" stroke-width="1.2"/>
+      <polyline points="30,15 30,0 38,0 38,8 46,8 46,0 54,0 54,15" fill="none" stroke="#c0141c" stroke-width="1.2"/>
+      <line x1="0" y1="15" x2="54" y2="15" stroke="#c0141c" stroke-width="0.8"/>
+    </g>
+
+    <!-- Greca escalonada derecha -->
+    <g transform="translate(1066, 15)" opacity="0.55">
+      <polyline points="0,15 0,0 8,0 8,8 16,8 16,0 24,0 24,15" fill="none" stroke="#c0141c" stroke-width="1.2"/>
+      <polyline points="30,15 30,0 38,0 38,8 46,8 46,0 54,0 54,15" fill="none" stroke="#c0141c" stroke-width="1.2"/>
+      <line x1="0" y1="15" x2="54" y2="15" stroke="#c0141c" stroke-width="0.8"/>
+    </g>
+
+    <!-- Puntos decorativos izquierda -->
+    <g opacity="0.4">
+      <circle cx="160" cy="30" r="2" fill="#c0141c"/>
+      <circle cx="175" cy="30" r="1.2" fill="#c0141c"/>
+      <circle cx="188" cy="30" r="2" fill="#c0141c"/>
+      <circle cx="203" cy="30" r="1.2" fill="#c0141c"/>
+      <circle cx="216" cy="30" r="2" fill="#c0141c"/>
+    </g>
+
+    <!-- Puntos decorativos derecha -->
+    <g opacity="0.4">
+      <circle cx="984" cy="30" r="2" fill="#c0141c"/>
+      <circle cx="997" cy="30" r="1.2" fill="#c0141c"/>
+      <circle cx="1012" cy="30" r="2" fill="#c0141c"/>
+      <circle cx="1025" cy="30" r="1.2" fill="#c0141c"/>
+      <circle cx="1040" cy="30" r="2" fill="#c0141c"/>
+    </g>
+
+    <!-- Motivo de serpiente emplumada simplificado izquierda -->
+    <g transform="translate(240, 20)" opacity="0.5">
+      <path d="M0,10 Q10,0 20,10 Q30,20 40,10 Q50,0 60,10 Q70,20 80,10 Q90,0 100,10" fill="none" stroke="#c0141c" stroke-width="1.2"/>
+      <circle cx="0" cy="10" r="2" fill="#c0141c" opacity="0.6"/>
+      <circle cx="100" cy="10" r="2" fill="#c0141c" opacity="0.6"/>
+    </g>
+
+    <!-- Motivo de serpiente emplumada simplificado derecha -->
+    <g transform="translate(860, 20)" opacity="0.5">
+      <path d="M0,10 Q10,0 20,10 Q30,20 40,10 Q50,0 60,10 Q70,20 80,10 Q90,0 100,10" fill="none" stroke="#c0141c" stroke-width="1.2"/>
+      <circle cx="0" cy="10" r="2" fill="#c0141c" opacity="0.6"/>
+      <circle cx="100" cy="10" r="2" fill="#c0141c" opacity="0.6"/>
+    </g>
+
+    <!-- Rombos pequeños flanqueando el centro -->
+    <g opacity="0.6">
+      <rect x="490" y="26" width="8" height="8" transform="rotate(45 494 30)" fill="none" stroke="#c0141c" stroke-width="1"/>
+      <rect x="700" y="26" width="8" height="8" transform="rotate(45 704 30)" fill="none" stroke="#c0141c" stroke-width="1"/>
+    </g>
+  </svg>
+</div>
+
+<style>
+  .maya-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    padding: 0.5rem 0;
+  }
+  .maya-svg {
+    width: 100%;
+    height: 40px;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .maya-svg {
+      height: 60px;
+    }
+  }
+</style>
